@@ -88,7 +88,7 @@ fetch("json/product.json")
     for (let item of ProductDataJson) {
       output += `
       
-      <a href="/product.html" class="shop-card" title="${item.name}" >
+      <a href="/product.html?id=${item.productId}" class="shop-card" title="${item.name}" >
         <div class="shop-img-sec">
         <img src="${item.ProductImgMain}" alt="" class="mainImg">
             <img src="${item.ProductImgSide}" alt="" class="SideHoverImg">
@@ -98,7 +98,6 @@ fetch("json/product.json")
     </a>
         `;
     }
-    
 
     cardSection.innerHTML = output;
     getCall();
@@ -135,7 +134,7 @@ function chedboxfn() {
 
           for (let item of filteredProducts1) {
             filterOutput += `
-            <a href="/product.html" class="shop-card" title="${item.name}" >
+            <a href="/product.html?id=${item.productId}" class="shop-card" title="${item.name}" >
             <div class="shop-img-sec">
                 <img src="${item.ProductImgMain}" alt="" class="mainImg">
                 <img src="${item.ProductImgSide}" alt="" class="SideHoverImg">
@@ -361,7 +360,7 @@ const getGraph = (a) => {
       for (let item of filteredProducts) {
         output += `
         
-        <a href="/product.html" class="shop-card" title="${item.name}" >
+        <a href="/product.html?id=${item.productId}" class="shop-card" title="${item.name}" >
         <div class="shop-img-sec">
             <img src="${item.ProductImgMain}" alt="" class="mainImg">
             <img src="${item.ProductImgSide}" alt="" class="SideHoverImg">
